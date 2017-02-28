@@ -15,15 +15,16 @@
 
 ### Kernel real-time patch with Xenomai
 1. Install the following prerequisites:
-  * ```sudo apt-get install devscripts debhelper dh-kpatches findutils kernel-package ncurses-base mtr-tiny ncurses-bin libncurses5-dev lib32ncurses5-dev libncursesw5-dbg libncursesw5-dev libncurses-dev fakeroot zlib1g-dev xterm```
+  * ```sudo apt-get install devscripts debhelper dh-kpatches findutils kernel-package ncurses-base mtr-tiny ncurses-bin libncurses5-dev lib32ncurses5-dev libncursesw5-dbg libncursesw5-dev libncurses-dev fakeroot zlib1g-dev xterm checkinstall```
 2. Download the xenomai real-time framework:
   * ```mkdir -p ~/Downloads/xenomai && cd ~/Downloads/xenomai```
   * ```wget -O - http://xenomai.org/downloads/xenomai/stable/xenomai-3.0.3.tar.bz2 | tar -jxf -```
   * ```cd xenomai-3.0.3```
-3. Create new debian changelog entry and (build & install) the packages (**Make Sure to fill in your email and name!!**):
-  * ```DEBEMAIL="your@email" DEBFULLNAME="Your Name" debchange -v 3.0.3 Release 3.0.3```
-  * ```sudo debuild -uc -us && cd ../```
-  * ```sudo dpkg -i *.deb```
+3. build & install the xenomai packages:
+  * ```./scripts/bootstrap```
+  * ```mkdir build && cd build```
+  * ```../configure --enable-smp --enable-pshared```
+  * ```sudo checkinstall```
 4. Download I-pipe patch and Kernel Source:
   * ```mkdir -p ~/Downloads/patch && cd ~/Downloads/patch```
   * ```wget http://xenomai.org/downloads/ipipe/v4.x/x86/ipipe-core-4.4.43-x86-6.patch```
