@@ -22,7 +22,7 @@
   * ```cd xenomai-3.0.3```
 3. Create new debian changelog entry and (build & install) the packages (**Make Sure to fill in your email and name!!**):
   * ```DEBEMAIL="your@email" DEBFULLNAME="Your Name" debchange -v 3.0.3 Release 3.0.3```
-  * ```debuild -uc -us && cd ../```
+  * ```sudo debuild -uc -us && cd ../```
   * ```sudo dpkg -i *.deb```
 4. Download I-pipe patch and Kernel Source:
   * ```mkdir -p ~/Downloads/patch && cd ~/Downloads/patch```
