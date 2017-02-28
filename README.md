@@ -50,9 +50,9 @@
   
 ### Setup permissions and user groups
 1. Create and add yourself to xenomai user group:
-  * ```groupadd xenomai```
+  * ```sudo groupadd xenomai```
     * Group may already exist so ignore error if that is the case
-  * ```usermod -aG xenomai your-username```
+  * ```sudo usermod -aG xenomai your-username```
     * Example: ```usermod -aG xenomai kent```
 2. Download grub customizer
   * ```sudo add-apt-repository ppa:danielrichter2007/grub-customizer```
