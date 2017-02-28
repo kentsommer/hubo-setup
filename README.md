@@ -48,6 +48,36 @@
   * ```sudo update-grub```
   * ```sudo reboot```
   
+### Setup permissions and user groups
+1. Create and add yourself to xenomai user group:
+  * ```groupadd xenomai```
+    * Group may already exist so ignore error if that is the case
+  * ```usermod -aG xenomai your-username```
+    * Example: ```usermod -aG xenomai kent```
+2. Download grub customizer
+  * ```sudo add-apt-repository ppa:danielrichter2007/grub-customizer```
+  * ```sudo apt-get update```
+  * ```sudo apt-get install grub-customizer```
+3. Setup xenomai kernel parameters
+  * Run the above installed Grub Customizer and find the ```Linux 4.4.43-xenomai-3.0.3``` entry.
+  * Right click on that entry and select edit.
+  * Find the line beginning with "linux" (should be near the bottom)
+  * Add ```xenomai.allowed_group=<gid of xenomai group>``` to the end of the linux line
+    * Can find gid of xenomai group by running ```id your-username``` in a terminal. The number next to xenomai is the gid
+    * Example:
+      * id kent output shows ```132(xenomai)```
+      * full entry in grub entry would then be: ```linux	/boot/vmlinuz-4.4.43-xenomai-3.0.3 root=UUID=f9db850a-4660-4b15-8d64-074a92f6bfd6 ro  quiet splash $vt_handoff xenomai.allowed_group=132```
+  * Select OK
+  * Select Save 
+  * Quit the Grub Customizer application
+4. Reboot and test xenomai permissions
+  * ```sudo reboot```
+  * After reboot run the following:
+    * ```/usr/xenomai/bin/latency```
+      * If working you should start seeing latency test ouput
+    
+
+  
   
 
   
