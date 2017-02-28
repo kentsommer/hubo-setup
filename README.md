@@ -27,7 +27,8 @@
 4. Download I-pipe patch and Kernel Source:
   * ```mkdir -p ~/Downloads/patch && cd ~/Downloads/patch```
   * ```wget http://xenomai.org/downloads/ipipe/v4.x/x86/ipipe-core-4.4.43-x86-6.patch```
-  * ```wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.4.43.tar.xz```
+  * ```wget https://github.com/kentsommer/hubo-setup/releases/download/0.1/linux-4.4.43.tar.xz```
+    * **Note** this is not a completly vanilla 4.4.43 kernel as their is a compile time issue with the unisys visorbus included in the 4.4.43 source. So this linked kernel uses the latest (as of 2/28/17) release of the device drivers released by unisys. 
   * ```tar -xf linux-4.4.43.tar.xz && cd linux-4.4.43```
 5. Patch and configure the kernel
   * ```~/Downloads/xenomai/xenomai-3.0.3/scripts/prepare-kernel.sh --linux=. --adeos=../ipipe-core-4.4.43-x86-6.patch```
