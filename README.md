@@ -78,7 +78,7 @@
       
 ### Setup hubo for ROS and PODO
 1. Run script to do fully automatic setup for both PODO and hubo for ROS
-  * ```cd ~/Downloads && wget https://github.com/kentsommer/hubo-setup/releases/download/0.1/setup.sh && ./setup.sh
+  * ```cd ~/Downloads && wget https://github.com/kentsommer/hubo-setup/releases/download/0.1/setup.sh && ./setup.sh```
     
 
   
