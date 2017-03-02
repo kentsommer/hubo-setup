@@ -78,11 +78,11 @@
       * If working you should start seeing latency test ouput
   
   
-### (OPTIONAL - CHOOSE ONE) Setup hubo for ROS and PODO (non real-time)
+### (CHOOSE ONE) Setup hubo for ROS and PODO (non real-time)
 1. Run script to do fully automatic setup for both PODO (non real-time) and hubo for ROS
   * ```cd ~/Downloads && wget https://github.com/kentsommer/hubo-setup/releases/download/0.1/setup.sh && sudo chmod +x setup.sh && ./setup.sh```
   
-### (OPTIONAL - CHOOSE ONE) Setup hubo for ROS and PODO (real-time)
+### (CHOOSE ONE) Setup hubo for ROS and PODO (real-time AND requires special github repository access)
 1. Run script to do fully automatic setup for both PODO (real-time) and hubo for ROS
   * ```cd ~/Downloads && wget https://github.com/kentsommer/hubo-setup/releases/download/0.1/setup_realtime.sh && sudo chmod +x setup.sh && ./setup.sh```
     
