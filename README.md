@@ -76,10 +76,15 @@
   * After reboot run the following:
     * ```/usr/xenomai/bin/latency```
       * If working you should start seeing latency test ouput
-      
-### Setup hubo for ROS and PODO
-1. Run script to do fully automatic setup for both PODO and hubo for ROS
+  
+  
+### (OPTIONAL - CHOOSE ONE) Setup hubo for ROS and PODO (non real-time)
+1. Run script to do fully automatic setup for both PODO (non real-time) and hubo for ROS
   * ```cd ~/Downloads && wget https://github.com/kentsommer/hubo-setup/releases/download/0.1/setup.sh && sudo chmod +x setup.sh && ./setup.sh```
+  
+### (OPTIONAL - CHOOSE ONE) Setup hubo for ROS and PODO (real-time)
+1. Run script to do fully automatic setup for both PODO (real-time) and hubo for ROS
+  * ```cd ~/Downloads && wget https://github.com/kentsommer/hubo-setup/releases/download/0.1/setup_realtime.sh && sudo chmod +x setup.sh && ./setup.sh```
     
 
   
